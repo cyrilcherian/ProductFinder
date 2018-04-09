@@ -12,6 +12,7 @@ Command to register the Alexa device:
 **OR**
 
 1-`open product finder`.
+
 2-`register me`.
 
 The owners can then provide the product details and its location for each device via google login on the web interface:
