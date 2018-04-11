@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+
+.bar-container {
+  height: 120px;
+  padding-top: 10px;
+  background-color: rgba(52, 57, 76, 1);
+  box-sizing: border-box;
+}
+
+.header-logo {
+  float: left;
+}
+
+.header-logo .bag-image-header {
+  height: 40px;
+  width: 34px;
+  margin-left: 36px;
+  vertical-align: top;
+}
+
+.header-logo .header-text {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  font-family: 'Questrial', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 21px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.header-user {
+  display: inline-block;
+  float: right;  
+}
+
+.header-user .user-name {
+  display: inline-block;
+  font-family: 'Questrial', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  margin-right: 20px;
+}
+
+.header-user .image-container {
+  display: inline-block;
+
+}
+
+.header-google-userimage {
+  border-radius: 50%;
+  height: 38px;
+  width: 38px;
+  margin-right: 39px;
+}
+

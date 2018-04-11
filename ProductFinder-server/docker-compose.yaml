@@ -1,0 +1,29 @@
+version: '2' # specify docker-compose version
+
+# Define the services/containers to be run
+services:
+  product-finder-alexa: # name of the first service
+    container_name: productfinder-alexa
+    build: . # specify the directory of the Dockerfile
+    ports:
+      - "7001:8001"
+    mem_limit: 1024m
+    links:
+      - database # link this service to the database service  
+    environment: 
+      DB_URI: "mongodb://database:27017"   
+    networks:
+      - productfinder-network
+  database: # name of the third service
+    container_name: productfinder_mongo
+    image: mongo # specify image to build container from
+    mem_limit: 1024m
+    # ports:
+    #   - "27017:27017"
+    volumes:
+      - ./mongodb:/data/db
+
+    networks:
+      - productfinder-network
+networks:
+  productfinder-network:
