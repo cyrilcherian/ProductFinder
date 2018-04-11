@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+
+.google-login-page {
+  height:100vh;
+  position: relative;
+  background-color: rgba(52, 57, 76, 1);
+}
+
+.google-login-button-container {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 245px;
+  height: 154px;
+}
+
+.title {
+  font-family: 'Questrial', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+.google-login-button {
+  outline: 0;
+  border: 0;
+  height: 40px;
+  width: 196px;
+  margin: 26px 24px 0px 24px;
+  background-color: white;
+  background-image: url("./glogo.png");
+  background-size: 20px 20px;
+  background-position-y: center;
+  background-position-x: 10px;
+  background-repeat: no-repeat;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+  position: relative;
+  font-size: 15px;
+  text-align: right;
+  box-sizing: border-box;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.bag-image {
+  height: 30px;
+  width: 35px;
+  margin: 0px 105px;
+}
