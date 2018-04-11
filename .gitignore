@@ -1,11 +1,11 @@
 #ProductFinder-client
-./ProductFinder-client/node_modules
-./ProductFinder-client/coverage
-./ProductFinder-client/build
+ProductFinder-client/node_modules
+ProductFinder-client/coverage
+ProductFinder-client/build
 
 #ProductFinder-server
-./ProductFinder-server/node_modules
-./ProductFinder-server/mongodb
+ProductFinder-server/node_modules
+ProductFinder-server/mongodb
 
 #ProductFinder-lambda
-./ProductFinder-lambda/node_modules
+ProductFinder-lambda/node_modules
