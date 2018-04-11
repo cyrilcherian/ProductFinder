@@ -1,0 +1,10 @@
+{
+  "name": "alexa-skill-kit-sdk-factskill",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "alexa-sdk": "^1.0.25",
+    "atob": "^2.1.0",
+    "request": "^2.85.0"
+  }
+}
