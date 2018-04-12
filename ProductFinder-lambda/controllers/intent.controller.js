@@ -21,11 +21,11 @@ module.exports = {
             }
           })
           .catch(() => {
-            this.emit(':ask', constants.ERROR_MESSAGE, constants.REPROMPT_WAITING);
+            this.emit(':tell', constants.ERROR_MESSAGE, constants.REPROMPT_WAITING);
           })
       })
       .catch(() => {
-        this.emit(':ask', constants.ENABLE_AGAIN, constants.REPROMPT_WAITING);
+        this.emit(':tellWithLinkAccountCard', constants.CARD_NOTIFICATION);
       })
   },
 
@@ -38,7 +38,7 @@ module.exports = {
         productFinder.addNewDevice(deviceId, jwtObject.email)
           .then((status) => {
             if (status === 200) {
-              this.emit(':ask', constants.DEVICE_REGISTRATION_SUCCESS, constants.REPROMPT_WAITING);
+              this.emit(':tell', constants.DEVICE_REGISTRATION_SUCCESS, constants.REPROMPT_WAITING);
             }
             else {
               this.emit(':ask', constants.DEVICE_ALREADY_REGISTERED, constants.REPROMPT_WAITING);
@@ -49,7 +49,7 @@ module.exports = {
           });
       })
       .catch(() => {
-        this.emit(':ask', constants.ENABLE_AGAIN, constants.REPROMPT_WAITING);
+        this.emit(':tell', constants.ENABLE_AGAIN, constants.REPROMPT_WAITING);
       })
   },
 
@@ -68,7 +68,7 @@ module.exports = {
               if (registered) {
                 productFinder.getLocation(deviceId, product)
                   .then((productLocation) => {
-                    this.emit(':ask', responses.generateproductLocationResponse(product, productLocation), constants.REPROMPT_WAITING);
+                    this.emit(':tell', responses.generateproductLocationResponse(product, productLocation), constants.REPROMPT_WAITING);
                   })
                   .catch((err) => {
                     this.emit(':ask', constants.PRODUCT_NOT_FOUND, constants.REPROMPT_WAITING);
@@ -79,7 +79,7 @@ module.exports = {
               }
             })
             .catch(() => {
-              this.emit(':ask', constants.ERROR_MESSAGE, constants.REPROMPT_WAITING);
+              this.emit(':tell', constants.ERROR_MESSAGE, constants.REPROMPT_WAITING);
             });
         }
         else {
@@ -87,7 +87,7 @@ module.exports = {
         }
       })
       .catch(() => {
-        this.emit(':ask', constants.ENABLE_AGAIN, constants.REPROMPT_WAITING);
+        this.emit(':tell', constants.ENABLE_AGAIN, constants.REPROMPT_WAITING);
       });
   },
 

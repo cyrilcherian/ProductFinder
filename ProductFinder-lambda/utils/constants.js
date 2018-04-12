@@ -7,9 +7,10 @@ module.exports = {
     DEVICE_REGISTRATION_FAILED:'Registration failed please try again',
     DEVICE_NOT_REGISTERED:'Hey, To find the product location you have to first register this device. say, register me, to registerthis device',
     ENABLE_AGAIN: 'sorry, user validity has expired. Please enable the skill again',
-    MENTION_PRODUCT: 'Please mention the name of the product which you want to find',
+    MENTION_PRODUCT: 'Sorry, I could not find a product in the query. Please specify the name of a product',
+    CARD_NOTIFICATION: 'Please use your Alexa app to link your account. A card has been sent to the App',
     ERROR_MESSAGE:'Skill faced some problem please try after some time',
     REPROMPT_WAITING: 'hey, is there anything else you would like to know?',
-    HELP_RESPONSE: 'in help event',  
+    HELP_RESPONSE: 'This skill lets you find the location of the product you want to buy. Say register to register the device, you can ask for a products location, or say quit to exit the skill',  
     STOP_RESPONSE: 'thanks for using product finder. bye'
 }
