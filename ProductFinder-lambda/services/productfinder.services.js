@@ -6,7 +6,6 @@ const constants = require('../utils/constants');
 const getLocation = (deviceId, product) => {
   return new Promise((resolve, reject) => {
     const queryString = `?deviceId=${deviceId}&productName=${product}`;
-    //const url = 'http://localhost:8001/product/location' + queryString;
     const url = 'https://productfinderapi.qburst.build/product/location' + queryString;
     request.get(url, (error, response, body) => {
       const bodyObject = JSON.parse(body);
@@ -46,7 +45,6 @@ const addNewDevice = (deviceId, email) => {
 const getDeviceListOfUser = (userId) => {
   return new Promise(function (resolve, reject) {
     const queryString = `?userId=${userId}`;
-    //const url = 'http://localhost:8001/device/list' + queryString;
     const url = 'https://productfinderapi.qburst.build/device/list' + queryString;
     request.get(url, (error, response, body) => {
       const bodyObject = JSON.parse(body);      
